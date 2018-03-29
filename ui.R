@@ -6,7 +6,7 @@ if(length(new.packages)) install.packages(new.packages)
 library(shiny)
 library(networkD3)
 
-ui <- fluidPage(
+ui <- fluidPage(width = 3,
   
   titlePanel("Shiny App for EnaR"),
   
