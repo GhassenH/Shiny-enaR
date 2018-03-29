@@ -32,10 +32,10 @@ ui <- fluidPage(
       uiOutput("tb"),
       
       fluidRow(column(12, tableOutput("main_outputs"))),
-      fluidRow(column(12, forceNetworkOutput("plot_network"))),
+      fluidRow(column(10, offset = 1, forceNetworkOutput("plot_network"))),
       
       fluidRow(column(12, tableOutput("main_outputs2"))),
-      fluidRow(column(12, forceNetworkOutput("plot_network2")))
+      fluidRow(column(10, offset = 1, forceNetworkOutput("plot_network2")))
       
     )
   )
