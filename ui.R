@@ -6,13 +6,13 @@ if(length(new.packages)) install.packages(new.packages)
 library(shiny)
 library(networkD3)
 
-ui <- fluidPage(width = 3,
+ui <- fluidPage(
   
   titlePanel("Shiny App for EnaR"),
   
   sidebarLayout(
     
-    sidebarPanel(
+    sidebarPanel(width = 3,
       
       # Input: Select a file
       fileInput("file1", "Choose flow CSV File"),
