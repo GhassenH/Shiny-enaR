@@ -31,18 +31,12 @@ ui <- fluidPage(
       
       uiOutput("tb"),
       
-      fluidRow(
-        splitLayout(cellWidths = c("50%", "50%"),
-                    tableOutput("main_outputs"),
-                    tableOutput("main_outputs2"))),
+      fluidRow(column(12, tableOutput("main_outputs"))),
+      fluidRow(column(12, forceNetworkOutput("plot_network"))),
       
-      fluidRow(
-        splitLayout(cellWidths = c("50%", "50%"), 
-                    forceNetworkOutput("plot_network"), 
-                    forceNetworkOutput("plot_network2"))
-      )
+      fluidRow(column(12, tableOutput("main_outputs2"))),
+      fluidRow(column(12, forceNetworkOutput("plot_network2")))
+      
     )
   )
 )
-
-
